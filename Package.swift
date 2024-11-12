@@ -5,19 +5,25 @@ import PackageDescription
 
 let package = Package(
     name: "HTTPTypeAsyncHttpClient",
+    platforms: [
+        .macOS(.v10_15)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "HTTPTypeAsyncHttpClient",
             targets: ["HTTPTypeAsyncHttpClient"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/coollazy/HTTPType.git", from: "1.0.0"),
+        .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.23.1"),
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "HTTPTypeAsyncHttpClient"),
-        .testTarget(
-            name: "HTTPTypeAsyncHttpClientTests",
-            dependencies: ["HTTPTypeAsyncHttpClient"]),
+            name: "HTTPTypeAsyncHttpClient",
+            dependencies: [
+                .product(name: "HTTPType", package: "HTTPType"),
+                .product(name: "AsyncHTTPClient", package: "async-http-client"),
+            ]
+        ),
     ]
 )
