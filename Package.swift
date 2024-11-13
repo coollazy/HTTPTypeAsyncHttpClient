@@ -14,7 +14,7 @@ let package = Package(
             targets: ["HTTPTypeAsyncHttpClient"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/coollazy/HTTPType.git", from: "1.0.0"),
+        .package(url: "https://github.com/coollazy/HTTPType.git", from: "1.0.2"),
         .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.23.1"),
     ],
     targets: [
