@@ -6,7 +6,7 @@ public class Client: Session {
     
     private var session: HTTPClient
     
-    init() {
+    public init() {
         var configure = HTTPClient.Configuration()
         configure.decompression = .enabled(limit: .none)
         self.session = .init(

@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/coollazy/HTTPType.git",
       "state" : {
-        "revision" : "74a4bb0a60423120c8ac5cc9ee35aced00311fcd",
-        "version" : "1.0.0"
+        "revision" : "dbdd9cee42ee2754c086e00b948065f707a78402",
+        "version" : "1.0.2"
       }
     },
     {
